@@ -1,0 +1,36 @@
+{
+  "name": "DevContainer VueStarter",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolderBasename}-workspace,target=/workspace,type=volume",
+  
+  // Mount per lo store di pnpm
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-pnpm-store,target=/root/.local/share/pnpm/store,type=volume"
+  ],
+  
+  "forwardPorts": [3000],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig",
+        "xabikos.javascriptsnippets",
+        "stylelint.vscode-stylelint",
+        "fabiospampinato.vscode-highlight",
+        "github.vscode-pull-request-github",
+        "vue.volar",
+        "antfu.iconify",
+        "cipchk.cssrem",
+        "matijao.vue-nuxt-snippets",
+        "dongido.sync-env"
+      ]
+    }
+  },
+  "postCreateCommand": "echo 'Container creato: ora puoi generare la tua app Vue3 con pnpm create vuetify'"
+}
