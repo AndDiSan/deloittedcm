@@ -4,7 +4,6 @@ FROM node:20
 # Imposta la directory di lavoro
 WORKDIR /workspace
 
-# Aggiorna il sistema e installa git
 RUN apt-get update && apt-get install -y git
 
 # Installa e configura pnpm
