@@ -1,5 +1,5 @@
 {
-  "name": "DevContainer VueStarter",
+  "name": "DevContainer Deloitte",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
